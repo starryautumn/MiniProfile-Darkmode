@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+    <meta charset = "UTF-8">
+    <meta name="viewport" content="width=device-width", initial-scale:1.0>
+    <link href="styles.css" rel="stylesheet">
+
+<script>
+const storageTheme = localStorage.getItem('theme');
+const systemColorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+
+const newTheme = storageTheme ?? systemColorScheme;
+
+document.documentElement.setAttribute('data-theme', newTheme);
+</script>
+</head>
+
+<!--Descripcion-->
+
+<div class="box">
+    
+    
+<div class="profile">
+<div class="imgbox">
+<img src="https://i.pinimg.com/originals/92/09/4d/92094da372847b0bb6206d2ec7d4d278.jpg">
+</div>
+<h4 class="text">Daniela González<br><span>Developer Jr</span></h4>
+</div>
+
+<!--Menu-->
+<body>
+<ul class="menu">
+
+<li><label>
+<span class="title"><ion-icon name="wifi"></ion-icon>Wi-Fi</span>
+<span class="action">
+<input type ="checkbox">
+<i></i>
+</span>
+</label></li>
+
+<li><label>
+<span class="title"><ion-icon name="bluetooth"></ion-icon>Bluetooth</span>
+<span class="action">
+<input type ="checkbox">
+<i></i>
+</span>
+</label></li>
+
+<li><label>
+<span class="title"><ion-icon name="airplane"></ion-icon>Airplane Mode</span>
+<span class="action">
+<input type ="checkbox">
+<i></i>
+</span>
+</label></li>
+
+<li><label>
+<span class="title"><ion-icon name="location"></ion-icon>Location</span>
+<span class="action">
+<input type ="checkbox">
+<i></i>
+</span>
+</label></li>          
+
+<li><label>
+<span class="title"><ion-icon name="moon"></ion-icon>Darkmode</span>
+<span class="action">
+<input type ="checkbox" id="dark">
+<i></i>
+</span>
+</label></li>
+</ul>
+</div>
+
+
+<script src="./app.js"></script>
+</body>
+</html>
